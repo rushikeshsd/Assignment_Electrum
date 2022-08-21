@@ -1,5 +1,7 @@
 {
   "name": "Assig_Electrum",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
