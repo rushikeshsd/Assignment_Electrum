@@ -8,9 +8,9 @@ import { Router } from "@angular/router";
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
-
   constructor(private route: Router, private fb: FormBuilder) { }
-  loginForm: FormGroup
+  loginForm: FormGroup;
+
   ngOnInit() {
     this.initForm();
   }
@@ -31,7 +31,7 @@ export class LoginFormComponent implements OnInit {
       localStorage.setItem('userObj', JSON.stringify(userObj));
       this.route.navigate(['/users']);
     } else {
-      alert('some error');
+      alert('Please fill all the details'); // TODO : need to use notification
     }
   }
 }
